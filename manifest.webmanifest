@@ -1,0 +1,17 @@
+{
+  "name": "Atelier Pro Mobile",
+  "short_name": "Atelier Pro",
+  "description": "Peinture numérique sur iPad, iPhone et PC : pinceaux, calques, couleurs, export.",
+  "lang": "fr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#121214",
+  "theme_color": "#1F1F23",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

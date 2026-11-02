@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Atelier Pro Mobile</title>
+<meta name="description" content="Application de peinture numérique pour iPhone : pinceaux, calques, couleurs, export.">
+<meta name="theme-color" content="#1F1F23">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Atelier Pro">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css?v=1a7e0adf8a">
+</head>
+<body>
+<div id="app" data-sliders="left">
+  <header class="topbar">
+    <button id="btn-gallery" class="icon-btn" type="button"></button>
+    <button id="doc-title" class="doc-title" type="button" aria-label="Menu du document"></button>
+    <span id="save-state" class="save-state" data-state="saved" role="status" aria-label="Enregistré sur cet appareil"></span>
+    <div class="spacer"></div>
+    <button id="btn-undo" class="icon-btn" type="button" disabled></button>
+    <button id="btn-redo" class="icon-btn" type="button" disabled></button>
+    <button id="btn-export" class="icon-btn" type="button"></button>
+    <button id="btn-more" class="icon-btn" type="button"></button>
+  </header>
+
+  <main id="stage">
+    <canvas id="view" aria-label="Toile de dessin"></canvas>
+    <div id="ctxbar" class="ctxbar" aria-label="Options de l’outil"></div>
+    <div id="side" class="side"></div>
+    <button id="zoom-badge" class="zoom-badge" type="button" aria-label="Ajuster la toile à l’écran" title="Ajuster la toile à l’écran">100 %</button>
+
+    <section id="sheet-brushes" class="sheet" hidden aria-label="Pinceaux">
+      <div class="sheet-top"><span class="sheet-grab"></span><button class="sheet-close icon-btn" type="button" aria-label="Fermer"></button></div>
+      <div class="sheet-body"></div>
+    </section>
+    <section id="sheet-layers" class="sheet" hidden aria-label="Calques">
+      <div class="sheet-top"><span class="sheet-grab"></span><button class="sheet-close icon-btn" type="button" aria-label="Fermer"></button></div>
+      <div class="sheet-body"></div>
+    </section>
+    <section id="sheet-color" class="sheet" hidden aria-label="Couleur">
+      <div class="sheet-top"><span class="sheet-grab"></span><button class="sheet-close icon-btn" type="button" aria-label="Fermer"></button></div>
+      <div class="sheet-body"></div>
+    </section>
+    <section id="sheet-tools" class="sheet compact" hidden aria-label="Autres outils">
+      <div class="sheet-top"><span class="sheet-grab"></span><button class="sheet-close icon-btn" type="button" aria-label="Fermer"></button></div>
+      <div class="sheet-body"><div class="tools-grid"></div></div>
+    </section>
+  </main>
+
+  <nav class="toolbar" aria-label="Outils">
+    <button id="t-tools" class="tbtn" type="button" aria-expanded="false"></button>
+    <button id="t-brush" class="tbtn" type="button" data-label="Pinceau" aria-expanded="false"></button>
+    <button id="t-smudge" class="tbtn" type="button" data-label="Mélange" aria-expanded="false"></button>
+    <button id="t-eraser" class="tbtn" type="button" data-label="Gomme" aria-expanded="false"></button>
+    <button id="t-layers" class="tbtn" type="button" data-label="Calques" aria-expanded="false"></button>
+    <button id="t-color" class="tbtn color-btn" type="button" aria-expanded="false"></button>
+  </nav>
+</div>
+
+<script src="app.js?v=1a7e0adf8a"></script>
+</body>
+</html>
